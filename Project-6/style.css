@@ -1,0 +1,456 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   COLOR THEME
+========================= */
+
+:root {
+    --primary: #4263eb;
+    --primary-dark: #304bbd;
+    --background: #f1f4fb;
+    --white: #ffffff;
+    --dark: #243047;
+    --gray: #7c879a;
+    --border: #e1e6ef;
+    --green: #209b68;
+    --red: #d94343;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #edf1ff, #f8f9fd);
+    color: var(--dark);
+    min-height: 100vh;
+}
+
+
+/* =========================
+   AUTHENTICATION CONTAINER
+========================= */
+
+.auth-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+
+/* =========================
+   AUTHENTICATION CARD
+========================= */
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+
+    background-color: var(--white);
+
+    padding: 38px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   BRAND ICON
+========================= */
+
+.brand-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    background-color: #edf1ff;
+
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+.auth-card h1 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 49px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px rgba(66, 99, 235, 0.10);
+}
+
+.form-group small {
+    display: block;
+    color: var(--gray);
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.primary-btn {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--primary);
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.primary-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================
+   ERROR AND SUCCESS MESSAGES
+========================= */
+
+.message {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.message:empty {
+    display: none;
+}
+
+.message.error {
+    color: var(--red);
+    background-color: #fff0f0;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.message.success {
+    color: var(--green);
+    background-color: #eaf8f0;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+
+/* =========================
+   BOTTOM TEXT
+========================= */
+
+.bottom-text {
+    text-align: center;
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.bottom-text a {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+    padding: 45px 20px;
+}
+
+
+/* Dashboard Header */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.dashboard-header h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+
+/* Logout Button */
+
+.logout-btn {
+    background-color: #fff0f0;
+    color: var(--red);
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #ffdddd;
+}
+
+
+/* =========================
+   WELCOME CARD
+========================= */
+
+.welcome-card {
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+
+    text-align: center;
+}
+
+.dashboard-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    background-color: #edf1ff;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 38px;
+}
+
+.welcome-card h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.welcome-card > p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   USER INFORMATION
+========================= */
+
+.user-information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+    text-align: left;
+}
+
+.info-item {
+    background-color: #f5f7fc;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    min-width: 0;
+}
+
+.info-item span {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.info-item strong {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.active-status {
+    color: var(--green);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.dashboard-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(66, 99, 235, 0.35);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    .auth-card {
+        padding: 27px 20px;
+    }
+
+    .auth-card h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-container {
+        padding: 25px 13px;
+    }
+
+    .dashboard-header {
+        align-items: flex-start;
+    }
+
+    .dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .welcome-card {
+        padding: 25px 18px;
+    }
+
+    .welcome-card h2 {
+        font-size: 24px;
+    }
+
+    .user-information {
+        grid-template-columns: 1fr;
+    }
+
+    .logout-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+}

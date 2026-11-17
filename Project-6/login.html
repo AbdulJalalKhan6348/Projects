@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Authentication System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body data-page="login">
+
+    <main class="auth-container">
+
+        <section class="auth-card">
+
+            <div class="brand-icon">🔑</div>
+
+            <h1>Welcome Back!</h1>
+
+            <p class="subtitle">
+                Login to access your account.
+            </p>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="loginIdentifier">
+                        Username or Email
+                    </label>
+
+                    <input
+                        type="text"
+                        id="loginIdentifier"
+                        placeholder="Enter username or email"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+
+                <p id="loginMessage"
+                   class="message"
+                   role="alert"
+                   aria-live="polite"></p>
+
+
+                <button type="submit" class="primary-btn">
+                    Login
+                </button>
+
+            </form>
+
+
+            <p class="bottom-text">
+                Don't have an account?
+
+                <a href="register.html">Register here</a>
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
