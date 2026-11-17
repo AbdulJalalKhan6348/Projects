@@ -1,0 +1,7 @@
+Project-9/
+│
+├── password_generator.py
+│
+├── password_generator_gui.py
+│
+└── requirements.txt
