@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My To-Do List App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="header-icon">✓</div>
+
+            <h1>My To-Do List</h1>
+
+            <p>Organize your day and get things done!</p>
+
+        </header>
+
+
+        <!-- Summary Cards -->
+        <section class="summary">
+
+            <div class="summary-card pending-summary">
+                <span class="summary-number" id="totalPending">0</span>
+                <span class="summary-label">Pending Tasks</span>
+            </div>
+
+            <div class="summary-card completed-summary">
+                <span class="summary-number" id="totalCompleted">0</span>
+                <span class="summary-label">Completed Tasks</span>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task Form -->
+        <section class="add-section">
+
+            <form id="taskForm">
+
+                <label for="taskInput">Add a New Task</label>
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you need to do?"
+                        maxlength="200"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" class="add-btn">
+                        + Add Task
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p class="status-message" id="statusMessage"
+               role="status" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- Task Lists -->
+        <div class="task-columns">
+
+            <!-- Pending Tasks -->
+            <section class="task-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Pending Tasks</h2>
+                        <p>Tasks waiting to be completed</p>
+                    </div>
+
+                    <span class="count pending-count" id="pendingCount">
+                        0 pending
+                    </span>
+
+                </div>
+
+                <div class="task-list" id="pendingList"
+                     aria-label="Pending tasks">
+                </div>
+
+                <p class="empty-state" id="pendingEmpty">
+                    <span class="empty-icon">📝</span>
+                    <strong>No pending tasks!</strong>
+                    <span>Add a new task to get started.</span>
+                </p>
+
+            </section>
+
+
+            <!-- Completed Tasks -->
+            <section class="task-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Completed Tasks</h2>
+                        <p>Tasks you have finished</p>
+                    </div>
+
+                    <span class="count completed-count" id="completedCount">
+                        0 completed
+                    </span>
+
+                </div>
+
+                <div class="task-list" id="completedList"
+                     aria-label="Completed tasks">
+                </div>
+
+                <p class="empty-state" id="completedEmpty">
+                    <span class="empty-icon">🎯</span>
+                    <strong>No completed tasks yet!</strong>
+                    <span>Your finished tasks will appear here.</span>
+                </p>
+
+            </section>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <p>Small steps every day lead to big achievements.</p>
+
+            <p>© 2026 My To-Do List App | Built with HTML, CSS & JavaScript</p>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
